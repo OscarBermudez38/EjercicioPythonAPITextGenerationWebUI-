@@ -25,7 +25,9 @@ Por defecto están los caracteres capados a 512 entonces para arreglar eso debem
 ### Parámetros editados
 También se puede editar el max_lenght y la temperature desde la linea de comandos de la aplicación, en nuestro caso aumentamos el nº máximo de caracteres
 pero no tocamos la temperatura ya que eso lo mostramos desde la interfaz gráfica.
-`    body = {"prompt": user_message, "max_tokens": 4096}
+
+
+`    body = {"prompt": user_message, "max_tokens": 4096, "temperature": 0.8}
 `
 ![imagen-cliente-TextGenerationWebUI](images/parameters-editados.png)
 
