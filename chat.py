@@ -33,7 +33,7 @@ while True:
     # Incluir la temperatura en el cuerpo de la solicitud
     body = {
         "prompt": user_message,
-        "max_tokens": 4096,
+        "max_tokens": 2038,
         "temperature": temperatura
     }
 
