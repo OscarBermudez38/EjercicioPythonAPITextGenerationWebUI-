@@ -1,8 +1,7 @@
 # EjercicioPythonAPITextGenerationWebUI-
 Ejercicio en el cual probamos diferentes LLM para ver cual es mejor generando una historia
 
-Lo primero que debemos de hacer es ejecutar TextGenerationWebUI, una vez ejecutado tendremos que descargar y posteriormente instalar cada modelo en este caso vamos a probar 2 modelos diferentes priemro Qwen_Qwen2-0.5B-Instruct y segundo ............, comandos necesarios:
-
+Lo primero que debemos de hacer es ejecutar TextGenerationWebUI, una vez ejecutado tendremos que descargar y posteriormente instalar cada modelo en este caso hemos intentado utilizar varios modelos para probar pero la mayoría nos dio fallo de descarga o de carga elúnico que fue perfectamente fue Qwen_Qwen2-0.5B-Instruct.
 1. .\start_windows.bat
 2. Una vez dentro buscaremos enuestro buscador http://127.0.0.1:7860/
 3. A continuación tendremos que elegir un modelo de HuggingFace y copiar su nombre el cual esta compuesto del creador/nombre-del-modelo.
@@ -19,9 +18,29 @@ Lo primero que debemos de hacer es ejecutar TextGenerationWebUI, una vez ejecuta
 ## Modificación de parámetros 
 Por defecto están los caracteres capados a 512 entonces para arreglar eso debemos modificar los parámetros, para ello entramos en parameters y aunmentamos el número, aprovechando que estamos en esta pantalla aunmentaresmo también la temperatura así el modelo tendrá más creatividad.
 
+### Parámetros por defecto
+
+![imagen-cliente-TextGenerationWebUI](images/parameters-default.png)
+
+### Parámetros editados
+
+![imagen-cliente-TextGenerationWebUI](images/parameters-editados.png)
+
 ## Ejemplo de ejecución
 
-### Qwen_Qwen2-0.5B-Instruct
+### Qwen_Qwen2-0.5B-Instruct con el 512 caracteres y 1 de temperatura
+
+![ejecucuion-Qwen_Qwen2-0.5B-Instruct](images/historia-min-p.png)
+
+
+### Qwen_Qwen2-0.5B-Instruct con el 4096 caracteres y 3 de temperatura
+
 ![ejecucuion-Qwen_Qwen2-0.5B-Instruct](images/ejemplo-qwen.png)
 
-###
+### Errores
+A lo largo del ejercicio he tenido múltiples errores a la hora de descargar y cargar modelos pese a tener el acceso a la api, aquí dejo la lista de todos los modelos que intenté utilizar, al final utilicé diferentes modelos de Qwen ya que esos modelos si me funcionan.
+
+#### Lista de modelos que se intentaron utilizar
+
+![ejecucuion-Qwen_Qwen2-0.5B-Instruct](images/modelos-probados.png)
+
