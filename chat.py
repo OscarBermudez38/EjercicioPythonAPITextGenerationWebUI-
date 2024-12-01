@@ -14,7 +14,7 @@ while True:
     user_message = f"Hello, I need you to create a story where the main character is {personaje_principal}, accompanied by {personaje_secundario}. The story should take place in {lugar}, and it must include {accion} as a key event."
 
 
-    body = {"prompt": user_message, "max_tokens": 200}
+    body = {"prompt": user_message, "max_tokens": 4096}
     response = requests.post(url=url, headers=headers, json=body)
     message_response = json.loads(response.content.decode("utf-8"))
     assistant_message = message_response["choices"][0]["text"]
