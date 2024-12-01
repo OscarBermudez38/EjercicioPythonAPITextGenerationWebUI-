@@ -16,16 +16,24 @@ Lo primero que debemos de hacer es ejecutar TextGenerationWebUI, una vez ejecuta
 * Por defecto, la API estará disponible en http://localhost:5000.
 
 ## Modificación de parámetros 
-Por defecto están los caracteres capados a 512 entonces para arreglar eso debemos modificar los parámetros, para ello entramos en parameters y aunmentamos el número, aprovechando que estamos en esta pantalla aunmentaresmo también la temperatura así el modelo tendrá más creatividad.
+Para modificar los parámetros lo que haremos es editarlos a la hora de enviarle el body, siendo el max_tokens por defecto 2038 y la temperatura es elegida por el usuario :
+
+`   
+body = {
+        "prompt": user_message,
+        "max_tokens": 2038,
+        "temperature": temperatura
+    }
+    `
+
+## Edición de parámetros interfaz gráfica 
+También se puede editar el max_lenght y la temperature desde la linea de comandos de la aplicación, en nuestro caso hemos añadido la opción de que el usuario elija la temperatura dándole 3 opciones.
 
 ### Parámetros por defecto
 
 ![imagen-cliente-TextGenerationWebUI](images/parameters-default.png)
 
 ### Parámetros editados
-También se puede editar el max_lenght y la temperature desde la linea de comandos de la aplicación, en nuestro caso aumentamos el nº máximo de caracteres
-pero no tocamos la temperatura ya que eso lo mostramos desde la interfaz gráfica.
-
 
 `    body = {"prompt": user_message, "max_tokens": 4096, "temperature": 0.8}
 `
@@ -33,12 +41,12 @@ pero no tocamos la temperatura ya que eso lo mostramos desde la interfaz gráfic
 
 ## Ejemplo de ejecución
 
-### Qwen_Qwen2-0.5B-Instruct con el 512 caracteres y 1 de temperatura
+### Qwen_Qwen2-0.5B-Instruct con el 2038 caracteres y 3 de temperatura
 
 ![ejecucuion-Qwen_Qwen2-0.5B-Instruct](images/historia-min-p.png)
 
 
-### Qwen_Qwen2-0.5B-Instruct con el 4096 caracteres y 3 de temperatura
+### Qwen_Qwen2-0.5B-Instruct con el 2038 caracteres y 2 de temperatura
 
 ![ejecucuion-Qwen_Qwen2-0.5B-Instruct](images/ejemplo-qwen.png)
 
