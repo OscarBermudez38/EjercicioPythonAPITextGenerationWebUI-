@@ -50,8 +50,12 @@ También se puede editar el max_lenght y la temperature desde la linea de comand
 
 ![ejecucuion-Qwen_Qwen2-0.5B-Instruct](images/ejemplo-qwen.png)
 
+### Qwen_Qwen2-0.5B-Instruct con 2038 caracteres y 3 de temperatura
+
+![ejecucuion-Qwen_Qwen2-0.5B-Instruct](images/ejemplo-qwen-3.png)
+
 ## Conclusión
-Como hemos podido observar parece que trabaja mejor con con 2 de temperatura, ya que aunque no haya añadido al 2º personaje ni la accion si introdujo al personaje principal y el escenario, también es importante observar que en el 1º ejemplo ha repetido las mismas oraciones hasta rellenar el máximo de caracteres.
+Como hemos podido observar parece que trabaja mejor cuanta más temperatura tiene, donde mejor siguió las normas que le pedimos fue en el 3 llegando añadir todos los personajes y sacando una historia de 7 capitulos (los añadiré a images pero no en el readme.md para no hacerlo más tedioso).
 
 ### Errores
 A lo largo del ejercicio he tenido múltiples errores a la hora de descargar y cargar modelos pese a tener el acceso a la api, aquí dejo la lista de todos los modelos que intenté utilizar, al final utilicé diferentes modelos de Qwen ya que esos modelos si me funcionan.
